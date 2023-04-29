@@ -19,19 +19,27 @@
       "element": "water"
     },
     {
-      "id": "d0f44e14-00fd-4ef8-bac1-e499f71c52ab",
-      "name": "mers",
-      "description": "draiving",
-      "element": "earth"
+      "id": "f720baf3-9e7d-4085-9b80-3f5e6570aa34",
+      "name": "Loan",
+      "description": "drinking and smoking",
+      "element": "fire"
+    },
+    {
+      "id": "0a01a161-3188-484f-bd40-e7d14f50f138",
+      "name": "ivan",
+      "description": "efohwefoh",
+      "element": "water"
     }
   ],
   "filters": [
-    { "id": "all",
+    {
+      "id": "all",
       "name": "all",
       "label": "Все",
       "className": "btn-outline-dark"
     },
-    { "id": "fire",
+    {
+      "id": "fire",
       "name": "fire",
       "label": "Огонь",
       "className": "btn-danger"

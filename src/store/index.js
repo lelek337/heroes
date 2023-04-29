@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import heroes from '../components/heroesList/heroesSlice';
 import filters from '../components/heroesFilters/filterSlice';
+import { apiSlice } from '../api/apiSlice';
 
 const stringMiddeleware = () => (next) => (action) => {
   if (typeof action === 'string') {
@@ -13,8 +13,10 @@ const stringMiddeleware = () => (next) => (action) => {
 };
     
 const store = configureStore({
-  reducer: {heroes, filters},
-  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(stringMiddeleware),
+  reducer: {filters, [apiSlice.reducerPath]: apiSlice.reducer},
+  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(
+    stringMiddeleware,
+    apiSlice.middleware),
   devTools: process.env.NODE_ENV !== 'production',
 })
 
